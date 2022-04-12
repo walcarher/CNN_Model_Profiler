@@ -34,6 +34,8 @@ elif args.model == "VGG16":
     model = models.vgg16(pretrained=True).cuda()
 elif args.model == "ResNet18":
     model = models.resnet18(pretrained=True).cuda()
+elif args.model == "SqueezeNet":
+    model = models.squeezenet1_0(pretrained=True).cuda()
 else:
     print("ERROR: Model is not included in the evaluation zoo")
     exit()
@@ -42,13 +44,25 @@ if args.dist_plot:
     i = 0
     zero_count = []
     layer_names = []
+    input_sizes = []
+    K = []
+    HW = []
+    C = []
+    N = []
     model_stats = summary(model,(1, 3, 224, 224),col_names=["input_size"])
-    #print(args.model," Parameters: ")
+    for layer_info in model_stats.summary_list:
+        if not str(layer_info).find("Conv2d: 1") == -1 or not str(layer_info).find("Conv2d: 2") == -1 or not str(layer_info).find("Conv2d: 3") == -1:
+            input_sizes.append(layer_info.input_size)
     for l in list(model.named_parameters()):
         if (not l[0].find("features") == -1 or not l[0].find("conv") == -1) and not l[0].find("weight") == -1:
+            kernel = l[1].detach().cpu().numpy() 
+            input_size = input_sizes[i]
+            K.append(kernel.shape[2])
+            HW.append(input_size[2])
+            C.append(input_size[1])
+            N.append(kernel.shape[0])
             i += 1
             plt.figure()
-            kernel = l[1].detach().cpu().numpy() 
             #print(l[0], ':', kernel.shape)
             plt.title(args.model+": Conv "+str(i)+" Layer")
             layer_names.append("Conv "+str(i))
@@ -64,6 +78,10 @@ if args.dist_plot:
     plt.ylabel("Zero count")
     plt.bar(layer_names,zero_count,zorder=3)
     plt.xticks(rotation=90)
+    print(K)
+    print(HW)
+    print(C)
+    print(N)
     plt.show()
 
 # Generate VHDL code for each Conv2D layer with pretrained weights   

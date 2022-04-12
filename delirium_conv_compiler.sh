@@ -9,10 +9,16 @@ mkdir "vhdl_generated"
 # Number of filters/output channels: N
 #CONV=("conv1x1" "conv3x3" "conv5x5" "conv7x7" "conv11x11")
 # AlexNet CNN Layers
-K=(11 5 3 3 3)
-HW=(224 27 13 13 13)
-C=(3 64 192 384 256)
-N=(64 192 384 256 256)
+# K=(11 5 3 3 3)
+# HW=(224 27 13 13 13)
+# C=(3 64 192 384 256)
+# N=(64 192 384 256 256)
+
+# SqueezeNet CNN Layers
+K=(7 1 1 3 1 1 3 1 1 3 1 1 3 1 1 3 1 1 3 1 1 3 1 1 3)
+HW=(224 54 54 54 54 54 54 54 54 54 27 27 27 27 27 27 27 27 27 27 27 27 13 13 13)
+C=(3 96 16 16 128 16 16 128 32 32 256 32 32 256 48 48 384 48 48 384 64 64 512 64 64)
+N=(96 16 64 64 16 64 64 32 128 128 32 128 128 48 192 192 48 192 192 64 256 256 64 256 256)
 
 # Generate an iterated folder for each case OperationsxHWxCxN
 for i in "${!K[@]}";
@@ -23,7 +29,7 @@ do
 done
 
 # Create .onnx files on each folder vhdl_generated/conkxk/hw_HW/c_C for all n cases in N
-python3 CNN_profiler.py -m AlexNet -g 1;
+python3 CNN_profiler.py -m SqueezeNet -g 1;
 
 # Using Delirium to automatically generate .vhdl files (weights and compilers) from .onnx files. ATTENTION: Delirium is not included!
 # Create a folder vhdl_generated/convkxk/hw_HW/c_C/convkxk_hw_c_n_vhdl_generated with all the output .vhdl files
