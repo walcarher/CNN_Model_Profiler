@@ -1,0 +1,74 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2017  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 17.1.0 Build 240 10/25/2017 SJ Pro Edition
+# Date created = 14:42:43  April 07, 2022
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		AlgoBlocsMeasurements_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Intel recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone 10 GX"
+set_global_assignment -name DEVICE 10CX220YF780E5G
+set_global_assignment -name TOP_LEVEL_ENTITY conv3x3_13_384_256_main
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 17.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:42:43  APRIL 07, 2022"
+set_global_assignment -name LAST_QUARTUS_VERSION "17.1.0 Pro Edition"
+set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 100
+set_global_assignment -name POWER_AUTO_COMPUTE_TJ ON
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name POWER_USE_PVA ON
+set_global_assignment -name FLOW_ENABLE_POWER_ANALYZER ON
+set_global_assignment -name POWER_DEFAULT_INPUT_IO_TOGGLE_RATE "90 %"
+set_global_assignment -name POWER_USE_INPUT_FILES OFF
+set_global_assignment -name SDC_FILE measurements_config.sdc
+set_global_assignment -name VHDL_INPUT_VERSION VHDL_2008
+set_global_assignment -name VHDL_FILE ../delirium_dist/lib/hdl/ConvLayer.vhd
+set_global_assignment -name VHDL_FILE ../delirium_dist/lib/hdl/DelayTaps.vhd
+set_global_assignment -name VHDL_FILE ../delirium_dist/lib/hdl/Delirium.vhd
+set_global_assignment -name VHDL_FILE ../delirium_dist/lib/hdl/DisplayLayer.vhd
+set_global_assignment -name VHDL_FILE ../delirium_dist/lib/hdl/DotProduct.vhd
+set_global_assignment -name VHDL_FILE ../delirium_dist/lib/hdl/InputLayer.vhd
+set_global_assignment -name VHDL_FILE ../delirium_dist/lib/hdl/MAC.vhd
+set_global_assignment -name VHDL_FILE ../delirium_dist/lib/hdl/MaxPool.vhd
+set_global_assignment -name VHDL_FILE ../delirium_dist/lib/hdl/NeighExtractor.vhd
+set_global_assignment -name VHDL_FILE ../delirium_dist/lib/hdl/OutputLayer.vhd
+set_global_assignment -name VHDL_FILE ../delirium_dist/lib/hdl/PoolH.vhd
+set_global_assignment -name VHDL_FILE ../delirium_dist/lib/hdl/PoolLayer.vhd
+set_global_assignment -name VHDL_FILE ../delirium_dist/lib/hdl/PoolV.vhd
+set_global_assignment -name VHDL_FILE ../delirium_dist/lib/hdl/ReluLayer.vhd
+set_global_assignment -name VHDL_FILE ../delirium_dist/lib/hdl/TanhLayer.vhd
+set_global_assignment -name VHDL_FILE ../delirium_dist/lib/hdl/Taps.vhd
+set_global_assignment -name VHDL_FILE ../delirium_dist/lib/hdl/TensorExtractor.vhd
+set_global_assignment -name VHDL_FILE ../delirium_dist/lib/hdl/UnsupportedLayer.vhd
