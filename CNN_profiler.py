@@ -36,6 +36,8 @@ elif args.model == "ResNet18":
     model = models.resnet18(pretrained=True).cuda()
 elif args.model == "SqueezeNet":
     model = models.squeezenet1_0(pretrained=True).cuda()
+elif args.model == "DenseNet":
+    model = models.densenet161(pretrained=True).cuda()
 else:
     print("ERROR: Model is not included in the evaluation zoo")
     exit()
