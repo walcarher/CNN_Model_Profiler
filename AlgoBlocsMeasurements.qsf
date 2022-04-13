@@ -18,7 +18,7 @@
 #
 # Quartus Prime
 # Version 17.1.0 Build 240 10/25/2017 SJ Pro Edition
-# Date created = 14:42:43  April 07, 2022
+# Date created = 15:42:48  April 12, 2022
 #
 # -------------------------------------------------------------------------- #
 #
@@ -38,9 +38,9 @@
 
 set_global_assignment -name FAMILY "Cyclone 10 GX"
 set_global_assignment -name DEVICE 10CX220YF780E5G
-set_global_assignment -name TOP_LEVEL_ENTITY conv3x3_13_384_256_main
+set_global_assignment -name TOP_LEVEL_ENTITY conv3x3_27_48_192_main
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 17.1.0
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:42:43  APRIL 07, 2022"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:42:48  APRIL 12, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "17.1.0 Pro Edition"
 set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
@@ -72,3 +72,6 @@ set_global_assignment -name VHDL_FILE ../delirium_dist/lib/hdl/TanhLayer.vhd
 set_global_assignment -name VHDL_FILE ../delirium_dist/lib/hdl/Taps.vhd
 set_global_assignment -name VHDL_FILE ../delirium_dist/lib/hdl/TensorExtractor.vhd
 set_global_assignment -name VHDL_FILE ../delirium_dist/lib/hdl/UnsupportedLayer.vhd
+set_global_assignment -name VHDL_FILE vhdl_generated/conv3x3/hw_27/c_48/conv3x3_27_48_192_vhdl_generated/bitwidths.vhd
+set_global_assignment -name VHDL_FILE vhdl_generated/conv3x3/hw_27/c_48/conv3x3_27_48_192_vhdl_generated/conv3x3_27_48_192_main.vhd
+set_global_assignment -name VHDL_FILE vhdl_generated/conv3x3/hw_27/c_48/conv3x3_27_48_192_vhdl_generated/params.vhd

@@ -1,24 +1,16 @@
 <internal_error>
 	<executable>quartus_syn.exe</executable>
 	<sub_system>MEM</sub_system>
-	<error>*** Fatal Error: Out of memory in module quartus_syn.exe (126673 megabytes used)</error>
-	<date>Thu Apr 07 16:56:29 2022</date>
+	<error>*** Fatal Error: Out of memory in module quartus_syn.exe (121811 megabytes used)</error>
+	<date>Tue Apr 12 16:02:12 2022</date>
 	<version>Version 17.1.0 Build 240 10/25/2017 SJ Pro Edition</version>
 </internal_error>
 
 <internal_error>
 	<executable>quartus_syn.exe</executable>
 	<sub_system>MEM</sub_system>
-	<error>*** Fatal Error: Out of memory in module quartus_syn.exe (129882 megabytes used)</error>
-	<date>Thu Apr 07 17:46:43 2022</date>
-	<version>Version 17.1.0 Build 240 10/25/2017 SJ Pro Edition</version>
-</internal_error>
-
-<internal_error>
-	<executable>quartus_syn.exe</executable>
-	<sub_system>MEM</sub_system>
-	<error>*** Fatal Error: Out of memory in module quartus_syn.exe (122271 megabytes used)</error>
-	<date>Fri Apr 08 11:19:02 2022</date>
+	<error>*** Fatal Error: Out of memory in module quartus_syn.exe (119202 megabytes used)</error>
+	<date>Tue Apr 12 18:53:37 2022</date>
 	<version>Version 17.1.0 Build 240 10/25/2017 SJ Pro Edition</version>
 </internal_error>
 
