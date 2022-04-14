@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone 10 GX"
 set_global_assignment -name DEVICE 10CX220YF780E5G
-set_global_assignment -name TOP_LEVEL_ENTITY conv3x3_27_48_192_main
+set_global_assignment -name TOP_LEVEL_ENTITY conv3x3_224_3_32_main
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 17.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:42:48  APRIL 12, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "17.1.0 Pro Edition"

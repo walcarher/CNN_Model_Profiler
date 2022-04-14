@@ -1,5 +1,5 @@
 Power Analyzer report for AlgoBlocsMeasurements
-Wed Apr 13 11:44:38 2022
+Thu Apr 14 15:52:14 2022
 Quartus Prime Version 17.1.0 Build 240 10/25/2017 SJ Pro Edition
 
 
@@ -50,34 +50,34 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.34        ;
+; Average used               ; 1.28        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   4.8%      ;
+;     Processors 2-8         ;   4.1%      ;
 +----------------------------+-------------+
 
 
 +--------------------------------------------------------------------------------------------------+
 ; Power Analyzer Summary                                                                           ;
 +-----------------------------------------------+--------------------------------------------------+
-; Power Analyzer Status                         ; Successful - Wed Apr 13 11:44:37 2022            ;
+; Power Analyzer Status                         ; Successful - Thu Apr 14 15:52:13 2022            ;
 ; Quartus Prime Version                         ; 17.1.0 Build 240 10/25/2017 SJ Pro Edition       ;
 ; Revision Name                                 ; AlgoBlocsMeasurements                            ;
-; Top-level Entity Name                         ; conv3x3_224_3_64_main                            ;
+; Top-level Entity Name                         ; conv3x3_224_3_32_main                            ;
 ; Family                                        ; Cyclone 10 GX                                    ;
 ; Device                                        ; 10CX220YF780E5G                                  ;
 ; Power Models                                  ; Final                                            ;
-; Total Thermal Power Dissipation               ; 1575.67 mW                                       ;
+; Total Thermal Power Dissipation               ; 1157.90 mW                                       ;
 ; Transceiver Standby Thermal Power Dissipation ; 0.00 mW                                          ;
 ; Transceiver Dynamic Thermal Power Dissipation ; 0.00 mW                                          ;
 ; I/O Standby Thermal Power Dissipation         ; 1.12 mW                                          ;
-; I/O Dynamic Thermal Power Dissipation         ; 14.89 mW                                         ;
-; Core Dynamic Thermal Power Dissipation        ; 908.26 mW                                        ;
+; I/O Dynamic Thermal Power Dissipation         ; 12.78 mW                                         ;
+; Core Dynamic Thermal Power Dissipation        ; 508.97 mW                                        ;
 ; HPS Standby Thermal Power Dissipation         ; 0.00 mW                                          ;
 ; HPS Dynamic Thermal Power Dissipation         ; 0.00 mW                                          ;
-; Device Static Thermal Power Dissipation       ; 651.41 mW                                        ;
+; Device Static Thermal Power Dissipation       ; 635.04 mW                                        ;
 ; COPACKAGED Standby Thermal Power Dissipation  ; 0.00 mW                                          ;
 ; COPACKAGED Dynamic Thermal Power Dissipation  ; 0.00 mW                                          ;
 ; Power Estimation Confidence                   ; Low: user provided insufficient toggle rate data ;
@@ -128,18 +128,18 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Power Analyzer
     Info: Version 17.1.0 Build 240 10/25/2017 SJ Pro Edition
-    Info: Processing started: Wed Apr 13 11:43:19 2022
+    Info: Processing started: Thu Apr 14 15:51:29 2022
 Info: Command: quartus_pow --read_settings_files=off --write_settings_files=off AlgoBlocsMeasurements -c AlgoBlocsMeasurements
 Info (16677): Loading final database
 Info (16734): Loading "final" snapshot for partition "root_partition".
-Info (16678): Successfully loaded final database: elapsed time is 00:00:06
+Info (16678): Successfully loaded final database: elapsed time is 00:00:05
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 100 degrees C
 Info (19539): Reading the HDL-embedded SDC files elapsed 00:00:00.
 Info (332104): Reading SDC File: 'measurements_config.sdc'
 Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
 Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
-Info (19449): Reading SDC files elapsed 00:00:02.
+Info (19449): Reading SDC files elapsed 00:00:01.
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
@@ -148,13 +148,13 @@ Info (223000): Starting Vectorless Power Activity Estimation
 Warning (222013): Relative toggle rates could not be calculated because no clock domain could be identified for some nodes
 Info (223001): Completed Vectorless Power Activity Estimation
 Info (218000): Using Advanced I/O Power to simulate I/O buffers with the specified board trace model
-Info (215049): Average toggle rate for this design is 9.887 millions of transitions / sec
-Info (215031): Total thermal power estimate for the design is 1575.67 mW
+Info (215049): Average toggle rate for this design is 9.479 millions of transitions / sec
+Info (215031): Total thermal power estimate for the design is 1157.90 mW
 Info: Quartus Prime Power Analyzer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 9991 megabytes
-    Info: Processing ended: Wed Apr 13 11:44:39 2022
-    Info: Elapsed time: 00:01:20
-    Info: Total CPU time (on all processors): 00:04:15
+    Info: Peak virtual memory: 8081 megabytes
+    Info: Processing ended: Thu Apr 14 15:52:14 2022
+    Info: Elapsed time: 00:00:45
+    Info: Total CPU time (on all processors): 00:02:21
 
 
 +--------------------------------------------+
@@ -162,6 +162,7 @@ Info: Quartus Prime Power Analyzer was successful. 0 errors, 1 warning
 +--------------+-----------------------------+
 ; Node         ; Reason                      ;
 +--------------+-----------------------------+
+; select_i[5]  ; No valid clock domain found ;
 ; select_i[6]  ; No valid clock domain found ;
 ; select_i[7]  ; No valid clock domain found ;
 ; select_i[8]  ; No valid clock domain found ;
@@ -211,7 +212,7 @@ Info: Quartus Prime Power Analyzer was successful. 0 errors, 1 warning
 ;     VCCERAM                                 ; 0.90 V                    ;
 ;     1.8 V I/O Standard                      ; 1.8 V                     ;
 ;                                             ;                           ;
-; Auto computed junction temperature          ; 29.7 degrees Celsius      ;
+; Auto computed junction temperature          ; 28.5 degrees Celsius      ;
 ;     Ambient temperature                     ; 25.0 degrees Celsius      ;
 ;     Junction-to-Case thermal resistance     ; 0.40 degrees Celsius/Watt ;
 ;     Case-to-Heat Sink thermal resistance    ; 0.10 degrees Celsius/Watt ;
@@ -226,12 +227,12 @@ Info: Quartus Prime Power Analyzer was successful. 0 errors, 1 warning
 +--------------------+-----------------------------------+-----------------------------+-----------------------------+-------------------------------+
 ; Block Type         ; Total Thermal Power by Block Type ; Block Thermal Dynamic Power ; Block Thermal Standby Power ; Routing Thermal Dynamic Power ;
 +--------------------+-----------------------------------+-----------------------------+-----------------------------+-------------------------------+
-; M20K               ; 209.37 mW                         ; 191.37 mW                   ; 0.00 mW                     ; 18.00 mW                      ;
-; Combinational cell ; 153.41 mW                         ; 104.33 mW                   ; 0.00 mW                     ; 49.08 mW                      ;
-; Register cell      ; 211.42 mW                         ; 54.40 mW                    ; 0.00 mW                     ; 157.02 mW                     ;
-; IO Analog          ; 15.66 mW                          ; 14.89 mW                    ; 0.77 mW                     ; 0.00 mW                       ;
-; IO Digital         ; 39.63 mW                          ; 0.00 mW                     ; 0.34 mW                     ; 39.28 mW                      ;
-; Clock Network      ; 294.77 mW                         ; 215.35 mW                   ; 0.00 mW                     ; 79.43 mW                      ;
+; M20K               ; 210.53 mW                         ; 191.37 mW                   ; 0.00 mW                     ; 19.15 mW                      ;
+; Combinational cell ; 49.55 mW                          ; 34.84 mW                    ; 0.00 mW                     ; 14.71 mW                      ;
+; Register cell      ; 95.39 mW                          ; 25.35 mW                    ; 0.00 mW                     ; 70.04 mW                      ;
+; IO Analog          ; 13.55 mW                          ; 12.78 mW                    ; 0.77 mW                     ; 0.00 mW                       ;
+; IO Digital         ; 21.85 mW                          ; 0.00 mW                     ; 0.34 mW                     ; 21.51 mW                      ;
+; Clock Network      ; 131.99 mW                         ; 67.39 mW                    ; 0.00 mW                     ; 64.60 mW                      ;
 +--------------------+-----------------------------------+-----------------------------+-----------------------------+-------------------------------+
 
 
@@ -240,13 +241,13 @@ Info: Quartus Prime Power Analyzer was successful. 0 errors, 1 warning
 +----------------+---------------------+-----------------------+-----------------------+----------------------+
 ; Voltage Supply ; Total Current Drawn ; Dynamic Current Drawn ; Standby Current Drawn ; Static Current Drawn ;
 +----------------+---------------------+-----------------------+-----------------------+----------------------+
-; VCCP           ; 86.04 mA            ; 0.54 mA               ; 0.52 mA               ; 84.98 mA             ;
-; VCCPT          ; 63.47 mA            ; 4.94 mA               ; 0.26 mA               ; 58.27 mA             ;
-; VCCA_PLL       ; 10.00 mA            ; 0.00 mA               ; 0.00 mA               ; 10.00 mA             ;
-; VCC            ; 1481.32 mA          ; 993.51 mA             ; 0.00 mA               ; 487.81 mA            ;
+; VCCP           ; 83.92 mA            ; 0.49 mA               ; 0.52 mA               ; 82.90 mA             ;
+; VCCPT          ; 57.82 mA            ; 1.60 mA               ; 0.26 mA               ; 55.96 mA             ;
+; VCCA_PLL       ; 9.79 mA             ; 0.00 mA               ; 0.00 mA               ; 9.79 mA              ;
+; VCC            ; 1033.04 mA          ; 555.92 mA             ; 0.00 mA               ; 477.11 mA            ;
 ; VCCPGM         ; 0.00 mA             ; 0.00 mA               ; 0.00 mA               ; 0.00 mA              ;
 ; VCCBAT         ; 0.00 mA             ; 0.00 mA               ; 0.00 mA               ; 0.00 mA              ;
-; VCCERAM        ; 21.69 mA            ; 9.09 mA               ; 0.00 mA               ; 12.60 mA             ;
+; VCCERAM        ; 21.31 mA            ; 9.09 mA               ; 0.00 mA               ; 12.21 mA             ;
 +----------------+---------------------+-----------------------+-----------------------+----------------------+
 
 
@@ -259,8 +260,8 @@ Info: Quartus Prime Power Analyzer was successful. 0 errors, 1 warning
 ; VCCIO2J ; 1.8V    ; 0.12 mA             ; 0.00 mA               ; 0.00 mA               ; 0.12 mA              ;
 ; VCCIO2K ; 1.8V    ; 0.12 mA             ; 0.00 mA               ; 0.00 mA               ; 0.12 mA              ;
 ; VCCIO2L ; 1.8V    ; 0.12 mA             ; 0.00 mA               ; 0.00 mA               ; 0.12 mA              ;
-; VCCIO3A ; 1.8V    ; 4.59 mA             ; 4.43 mA               ; 0.05 mA               ; 0.12 mA              ;
-; VCCIO3B ; 1.8V    ; 0.53 mA             ; 0.15 mA               ; 0.04 mA               ; 0.35 mA              ;
+; VCCIO3A ; 1.8V    ; 3.80 mA             ; 3.64 mA               ; 0.05 mA               ; 0.12 mA              ;
+; VCCIO3B ; 1.8V    ; 0.53 mA             ; 0.14 mA               ; 0.04 mA               ; 0.35 mA              ;
 +---------+---------+---------------------+-----------------------+-----------------------+----------------------+
 
 
@@ -269,35 +270,35 @@ Info: Quartus Prime Power Analyzer was successful. 0 errors, 1 warning
 +---------+---------------------+-----------------------+-----------------------+----------------------+
 ; Voltage ; Total Current Drawn ; Dynamic Current Drawn ; Standby Current Drawn ; Static Current Drawn ;
 +---------+---------------------+-----------------------+-----------------------+----------------------+
-; 1.8V    ; 5.59 mA             ; 4.57 mA               ; 0.09 mA               ; 0.93 mA              ;
+; 1.8V    ; 4.79 mA             ; 3.78 mA               ; 0.09 mA               ; 0.93 mA              ;
 +---------+---------------------+-----------------------+-----------------------+----------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Confidence Metric Details                                                                                                                                ;
-+----------------------------------------------------------------------------------------+-----------------+------------+----------------+-----------------+
-; Data Source                                                                            ; Total           ; Pin        ; Registered     ; Combinational   ;
-+----------------------------------------------------------------------------------------+-----------------+------------+----------------+-----------------+
-; Simulation (from file)                                                                 ;                 ;            ;                ;                 ;
-;     -- Number of signals with Toggle Rate from Simulation                              ; 0 (0.0%)        ; 0 (0.0%)   ; 0 (0.0%)       ; 0 (0.0%)        ;
-;     -- Number of signals with Static Probability from Simulation                       ; 0 (0.0%)        ; 0 (0.0%)   ; 0 (0.0%)       ; 0 (0.0%)        ;
-;                                                                                        ;                 ;            ;                ;                 ;
-; Node, entity or clock assignment                                                       ;                 ;            ;                ;                 ;
-;     -- Number of signals with Toggle Rate from Node, entity or clock assignment        ; 3 (0.0%)        ; 1 (1.4%)   ; 0 (0.0%)       ; 2 (0.0%)        ;
-;     -- Number of signals with Static Probability from Node, entity or clock assignment ; 3 (0.0%)        ; 1 (1.4%)   ; 0 (0.0%)       ; 2 (0.0%)        ;
-;                                                                                        ;                 ;            ;                ;                 ;
-; Vectorless estimation                                                                  ;                 ;            ;                ;                 ;
-;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 239398 (100.0%) ; 11 (15.3%) ; 78293 (100.0%) ; 161094 (100.0%) ;
-;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 211 (0.1%)      ; 0 (0.0%)   ; 0 (0.0%)       ; 211 (0.1%)      ;
-;     -- Number of signals with Static Probability from Vectorless estimation            ; 239398 (100.0%) ; 11 (15.3%) ; 78293 (100.0%) ; 161094 (100.0%) ;
-;                                                                                        ;                 ;            ;                ;                 ;
-; Default assignment                                                                     ;                 ;            ;                ;                 ;
-;     -- Number of signals with Toggle Rate from Default assignment                      ; 30 (0.0%)       ; 30 (41.7%) ; 0 (0.0%)       ; 0 (0.0%)        ;
-;     -- Number of signals with Static Probability from Default assignment               ; 60 (0.0%)       ; 60 (83.3%) ; 0 (0.0%)       ; 0 (0.0%)        ;
-;                                                                                        ;                 ;            ;                ;                 ;
-; Assumed 0                                                                              ;                 ;            ;                ;                 ;
-;     -- Number of signals with Toggle Rate assumed 0                                    ; 30 (0.0%)       ; 30 (41.7%) ; 0 (0.0%)       ; 0 (0.0%)        ;
-+----------------------------------------------------------------------------------------+-----------------+------------+----------------+-----------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Confidence Metric Details                                                                                                                              ;
++----------------------------------------------------------------------------------------+----------------+------------+----------------+----------------+
+; Data Source                                                                            ; Total          ; Pin        ; Registered     ; Combinational  ;
++----------------------------------------------------------------------------------------+----------------+------------+----------------+----------------+
+; Simulation (from file)                                                                 ;                ;            ;                ;                ;
+;     -- Number of signals with Toggle Rate from Simulation                              ; 0 (0.0%)       ; 0 (0.0%)   ; 0 (0.0%)       ; 0 (0.0%)       ;
+;     -- Number of signals with Static Probability from Simulation                       ; 0 (0.0%)       ; 0 (0.0%)   ; 0 (0.0%)       ; 0 (0.0%)       ;
+;                                                                                        ;                ;            ;                ;                ;
+; Node, entity or clock assignment                                                       ;                ;            ;                ;                ;
+;     -- Number of signals with Toggle Rate from Node, entity or clock assignment        ; 3 (0.0%)       ; 1 (1.4%)   ; 0 (0.0%)       ; 2 (0.0%)       ;
+;     -- Number of signals with Static Probability from Node, entity or clock assignment ; 3 (0.0%)       ; 1 (1.4%)   ; 0 (0.0%)       ; 2 (0.0%)       ;
+;                                                                                        ;                ;            ;                ;                ;
+; Vectorless estimation                                                                  ;                ;            ;                ;                ;
+;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 111901 (99.9%) ; 11 (15.3%) ; 38609 (100.0%) ; 73281 (100.0%) ;
+;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 190 (0.2%)     ; 0 (0.0%)   ; 0 (0.0%)       ; 190 (0.3%)     ;
+;     -- Number of signals with Static Probability from Vectorless estimation            ; 111901 (99.9%) ; 11 (15.3%) ; 38609 (100.0%) ; 73281 (100.0%) ;
+;                                                                                        ;                ;            ;                ;                ;
+; Default assignment                                                                     ;                ;            ;                ;                ;
+;     -- Number of signals with Toggle Rate from Default assignment                      ; 29 (0.0%)      ; 29 (40.3%) ; 0 (0.0%)       ; 0 (0.0%)       ;
+;     -- Number of signals with Static Probability from Default assignment               ; 60 (0.1%)      ; 60 (83.3%) ; 0 (0.0%)       ; 0 (0.0%)       ;
+;                                                                                        ;                ;            ;                ;                ;
+; Assumed 0                                                                              ;                ;            ;                ;                ;
+;     -- Number of signals with Toggle Rate assumed 0                                    ; 31 (0.0%)      ; 31 (43.1%) ; 0 (0.0%)       ; 0 (0.0%)       ;
++----------------------------------------------------------------------------------------+----------------+------------+----------------+----------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------+

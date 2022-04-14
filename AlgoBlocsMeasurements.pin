@@ -102,7 +102,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : A27       :        :                   :      
 in_data[3]                   : AA1       : input  : 1.8 V             :         : 3A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA2       :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA3       :        :                   :         : 3A        :                
-in_data[14]                  : AA4       : input  : 1.8 V             :         : 3A        : N              
+in_data[15]                  : AA4       : input  : 1.8 V             :         : 3A        : N              
 VCCIO3A                      : AA5       : power  :                   : 1.8V    : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA6       :        :                   :         : 3A        :                
 clk                          : AA7       : input  : 1.8 V             :         : 3A        : N              
@@ -131,8 +131,8 @@ in_data[13]                  : AB1       : input  : 1.8 V             :         
 GND                          : AB2       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB3       :        :                   :         : 3A        :                
 out_data[3]                  : AB4       : output : 1.8 V             :         : 3A        : N              
-select_i[28]                 : AB5       : input  : 1.8 V             :         : 3A        : N              
-select_i[27]                 : AB6       : input  : 1.8 V             :         : 3A        : N              
+select_i[26]                 : AB5       : input  : 1.8 V             :         : 3A        : N              
+select_i[25]                 : AB6       : input  : 1.8 V             :         : 3A        : N              
 GND                          : AB7       : gnd    :                   :         :           :                
 MSEL2                        : AB8       : input  :                   :         : CSS       :                
 nCE                          : AB9       :        :                   :         : CSS       :                
@@ -241,7 +241,7 @@ GXB_NC                       : AE27      :        :                   :         
 GXB_NC                       : AE28      :        :                   :         : 1C        :                
 out_data[4]                  : AF1       : output : 1.8 V             :         : 3A        : N              
 in_data[2]                   : AF2       : input  : 1.8 V             :         : 3A        : N              
-in_data[5]                   : AF3       : input  : 1.8 V             :         : 3A        : N              
+in_data[7]                   : AF3       : input  : 1.8 V             :         : 3A        : N              
 NC                           : AF4       :        :                   :         :           :                
 GND                          : AF5       : gnd    :                   :         :           :                
 out_dv                       : AF6       : output : 1.8 V             :         : 3A        : N              
@@ -461,7 +461,7 @@ GXB_GND*                     : F25       :        :                   :         
 GXB_GND*                     : F26       :        :                   :         : 1D        :                
 GND                          : F27       : gnd    :                   :         :           :                
 GND                          : F28       : gnd    :                   :         :           :                
-select_i[9]                  : G1        : input  : 1.8 V             :         : 3B        : N              
+select_i[7]                  : G1        : input  : 1.8 V             :         : 3B        : N              
 GND                          : G2        : gnd    :                   :         :           :                
 NC                           : G3        :        :                   :         :           :                
 NC                           : G4        :        :                   :         :           :                
@@ -490,7 +490,7 @@ GND                          : G26       : gnd    :                   :         
 GXB_NC                       : G27       :        :                   :         : 1D        :                
 GXB_NC                       : G28       :        :                   :         : 1D        :                
 in_data[9]                   : H1        : input  : 1.8 V             :         : 3B        : N              
-in_data[8]                   : H2        : input  : 1.8 V             :         : 3B        : N              
+select_i[31]                 : H2        : input  : 1.8 V             :         : 3B        : N              
 NC                           : H3        :        :                   :         :           :                
 GND                          : H4        : gnd    :                   :         :           :                
 NC                           : H5        :        :                   :         :           :                
@@ -518,8 +518,8 @@ GXB_GND*                     : H26       :        :                   :         
 GND                          : H27       : gnd    :                   :         :           :                
 GND                          : H28       : gnd    :                   :         :           :                
 GND                          : J1        : gnd    :                   :         :           :                
-in_data[16]                  : J2        : input  : 1.8 V             :         : 3B        : N              
-in_data[23]                  : J3        : input  : 1.8 V             :         : 3B        : N              
+in_data[0]                   : J2        : input  : 1.8 V             :         : 3B        : N              
+in_data[22]                  : J3        : input  : 1.8 V             :         : 3B        : N              
 NC                           : J4        :        :                   :         :           :                
 NC                           : J5        :        :                   :         :           :                
 GND                          : J6        : gnd    :                   :         :           :                
@@ -573,10 +573,10 @@ GXB_GND*                     : K25       :        :                   :         
 GXB_GND*                     : K26       :        :                   :         : 1D        :                
 GND                          : K27       : gnd    :                   :         :           :                
 GND                          : K28       : gnd    :                   :         :           :                
-select_i[19]                 : L1        : input  : 1.8 V             :         : 3B        : N              
+select_i[17]                 : L1        : input  : 1.8 V             :         : 3B        : N              
 reset_n                      : L2        : input  : 1.8 V             :         : 3B        : N              
-select_i[24]                 : L3        : input  : 1.8 V             :         : 3B        : N              
-select_i[5]                  : L4        : input  : 1.8 V             :         : 3B        : N              
+select_i[22]                 : L3        : input  : 1.8 V             :         : 3B        : N              
+in_data[8]                   : L4        : input  : 1.8 V             :         : 3B        : N              
 NC                           : L5        :        :                   :         :           :                
 NC                           : L6        :        :                   :         :           :                
 NC                           : L7        :        :                   :         :           :                
@@ -601,10 +601,10 @@ GND                          : L25       : gnd    :                   :         
 GND                          : L26       : gnd    :                   :         :           :                
 GXB_NC                       : L27       :        :                   :         : 1D        :                
 GXB_NC                       : L28       :        :                   :         : 1D        :                
-in_data[15]                  : M1        : input  : 1.8 V             :         : 3B        : N              
+in_data[12]                  : M1        : input  : 1.8 V             :         : 3B        : N              
 GND                          : M2        : gnd    :                   :         :           :                
-select_i[23]                 : M3        : input  : 1.8 V             :         : 3B        : N              
-select_i[30]                 : M4        : input  : 1.8 V             :         : 3B        : N              
+select_i[21]                 : M3        : input  : 1.8 V             :         : 3B        : N              
+select_i[28]                 : M4        : input  : 1.8 V             :         : 3B        : N              
 NC                           : M5        :        :                   :         :           :                
 NC                           : M6        :        :                   :         :           :                
 NC                           : M7        :        :                   :         :           :                
@@ -629,9 +629,9 @@ GXB_GND*                     : M25       :        :                   :         
 GXB_GND*                     : M26       :        :                   :         : 1D        :                
 GND                          : M27       : gnd    :                   :         :           :                
 GND                          : M28       : gnd    :                   :         :           :                
-select_i[25]                 : N1        : input  : 1.8 V             :         : 3B        : N              
-select_i[17]                 : N2        : input  : 1.8 V             :         : 3B        : N              
-in_data[22]                  : N3        : input  : 1.8 V             :         : 3B        : N              
+select_i[23]                 : N1        : input  : 1.8 V             :         : 3B        : N              
+select_i[15]                 : N2        : input  : 1.8 V             :         : 3B        : N              
+in_data[19]                  : N3        : input  : 1.8 V             :         : 3B        : N              
 GND                          : N4        : gnd    :                   :         :           :                
 NC                           : N5        :        :                   :         :           :                
 NC                           : N6        :        :                   :         :           :                
@@ -659,8 +659,8 @@ GXB_NC                       : N27       :        :                   :         
 GXB_NC                       : N28       :        :                   :         : 1D        :                
 GND                          : P1        : gnd    :                   :         :           :                
 select_i[4]                  : P2        : input  : 1.8 V             :         : 3B        : N              
-select_i[7]                  : P3        : input  : 1.8 V             :         : 3B        : N              
-select_i[18]                 : P4        : input  : 1.8 V             :         : 3B        : N              
+select_i[5]                  : P3        : input  : 1.8 V             :         : 3B        : N              
+select_i[16]                 : P4        : input  : 1.8 V             :         : 3B        : N              
 NC                           : P5        :        :                   :         :           :                
 NC                           : P6        :        :                   :         :           :                
 NC                           : P7        :        :                   :         :           :                
@@ -686,10 +686,10 @@ GXB_GND*                     : P26       :        :                   :         
 GND                          : P27       : gnd    :                   :         :           :                
 GND                          : P28       : gnd    :                   :         :           :                
 select_i[2]                  : R1        : input  : 1.8 V             :         : 3B        : N              
-select_i[20]                 : R2        : input  : 1.8 V             :         : 3B        : N              
+select_i[18]                 : R2        : input  : 1.8 V             :         : 3B        : N              
 GND                          : R3        : gnd    :                   :         :           :                
 enable                       : R4        : input  : 1.8 V             :         : 3B        : N              
-select_i[29]                 : R5        : input  : 1.8 V             :         : 3B        : N              
+select_i[27]                 : R5        : input  : 1.8 V             :         : 3B        : N              
 NC                           : R6        :        :                   :         :           :                
 NC                           : R7        :        :                   :         :           :                
 GND                          : R8        : gnd    :                   :         :           :                
@@ -714,13 +714,13 @@ GND                          : R26       : gnd    :                   :         
 GXB_NC                       : R27       :        :                   :         : 1D        :                
 GXB_NC                       : R28       :        :                   :         : 1D        :                
 in_fv                        : T1        : input  : 1.8 V             :         : 3B        : N              
-in_data[0]                   : T2        : input  : 1.8 V             :         : 3B        : N              
-select_i[11]                 : T3        : input  : 1.8 V             :         : 3B        : N              
+select_i[30]                 : T2        : input  : 1.8 V             :         : 3B        : N              
+select_i[9]                  : T3        : input  : 1.8 V             :         : 3B        : N              
 in_data[21]                  : T4        : input  : 1.8 V             :         : 3B        : N              
 VCCIO3B                      : T5        : power  :                   : 1.8V    : 3B        :                
-select_i[21]                 : T6        : input  : 1.8 V             :         : 3B        : N              
-select_i[12]                 : T7        : input  : 1.8 V             :         : 3B        : N              
-select_i[14]                 : T8        : input  : 1.8 V             :         : 3B        : N              
+select_i[19]                 : T6        : input  : 1.8 V             :         : 3B        : N              
+select_i[10]                 : T7        : input  : 1.8 V             :         : 3B        : N              
+select_i[12]                 : T8        : input  : 1.8 V             :         : 3B        : N              
 in_data[10]                  : T9        : input  : 1.8 V             :         : 3B        : N              
 GND                          : T10       : gnd    :                   :         :           :                
 VCC                          : T11       : power  :                   : 0.9V    :           :                
@@ -741,14 +741,14 @@ GXB_GND*                     : T25       :        :                   :         
 GXB_GND*                     : T26       :        :                   :         : 1C        :                
 GND                          : T27       : gnd    :                   :         :           :                
 GND                          : T28       : gnd    :                   :         :           :                
-select_i[8]                  : U1        : input  : 1.8 V             :         : 3B        : N              
+select_i[6]                  : U1        : input  : 1.8 V             :         : 3B        : N              
 GND                          : U2        : gnd    :                   :         :           :                
 in_data[17]                  : U3        : input  : 1.8 V             :         : 3B        : N              
-in_data[19]                  : U4        : input  : 1.8 V             :         : 3B        : N              
-select_i[6]                  : U5        : input  : 1.8 V             :         : 3B        : N              
-select_i[15]                 : U6        : input  : 1.8 V             :         : 3B        : N              
+in_data[18]                  : U4        : input  : 1.8 V             :         : 3B        : N              
+in_data[16]                  : U5        : input  : 1.8 V             :         : 3B        : N              
+select_i[13]                 : U6        : input  : 1.8 V             :         : 3B        : N              
 VCCIO3B                      : U7        : power  :                   : 1.8V    : 3B        :                
-select_i[16]                 : U8        : input  : 1.8 V             :         : 3B        : N              
+select_i[14]                 : U8        : input  : 1.8 V             :         : 3B        : N              
 VREFB3BN0                    : U9        : power  :                   : GND     : 3B        :                
 VCC                          : U10       : power  :                   : 0.9V    :           :                
 VCCP                         : U11       : power  :                   : 0.9V    :           :                
@@ -769,13 +769,13 @@ GND                          : U25       : gnd    :                   :         
 GND                          : U26       : gnd    :                   :         :           :                
 GXB_NC                       : U27       :        :                   :         : 1C        :                
 GXB_NC                       : U28       :        :                   :         : 1C        :                
-select_i[31]                 : V1        : input  : 1.8 V             :         : 3B        : N              
-select_i[13]                 : V2        : input  : 1.8 V             :         : 3B        : N              
-in_data[18]                  : V3        : input  : 1.8 V             :         : 3B        : N              
+select_i[29]                 : V1        : input  : 1.8 V             :         : 3B        : N              
+select_i[11]                 : V2        : input  : 1.8 V             :         : 3B        : N              
+in_data[23]                  : V3        : input  : 1.8 V             :         : 3B        : N              
 VCCIO3B                      : V4        : power  :                   : 1.8V    : 3B        :                
-select_i[22]                 : V5        : input  : 1.8 V             :         : 3B        : N              
+select_i[20]                 : V5        : input  : 1.8 V             :         : 3B        : N              
 in_data[20]                  : V6        : input  : 1.8 V             :         : 3B        : N              
-select_i[10]                 : V7        : input  : 1.8 V             :         : 3B        : N              
+select_i[8]                  : V7        : input  : 1.8 V             :         : 3B        : N              
 select_i[1]                  : V8        : input  : 1.8 V             :         : 3B        : N              
 GND                          : V9        : gnd    :                   :         :           :                
 VCC                          : V10       : power  :                   : 0.9V    :           :                
@@ -801,9 +801,9 @@ GND                          : W1        : gnd    :                   :         
 in_data[1]                   : W2        : input  : 1.8 V             :         : 3B        : N              
 in_dv                        : W3        : input  : 1.8 V             :         : 3B        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : W4        :        :                   :         : 3A        :                
-in_data[7]                   : W5        : input  : 1.8 V             :         : 3A        : N              
+in_data[6]                   : W5        : input  : 1.8 V             :         : 3A        : N              
 VCCIO3A                      : W6        : power  :                   : 1.8V    : 3A        :                
-in_data[12]                  : W7        : input  : 1.8 V             :         : 3A        : N              
+in_data[14]                  : W7        : input  : 1.8 V             :         : 3A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : W8        :        :                   :         : 3A        :                
 VREFB3AN0                    : W9        : power  :                   : GND     : 3A        :                
 TDO                          : W10       : output :                   :         : CSS       :                
@@ -826,9 +826,9 @@ GND                          : W26       : gnd    :                   :         
 GXB_NC                       : W27       :        :                   :         : 1C        :                
 GXB_NC                       : W28       :        :                   :         : 1C        :                
 out_data[7]                  : Y1        : output : 1.8 V             :         : 3A        : N              
-in_data[6]                   : Y2        : input  : 1.8 V             :         : 3A        : N              
+in_data[5]                   : Y2        : input  : 1.8 V             :         : 3A        : N              
 GND                          : Y3        : gnd    :                   :         :           :                
-select_i[26]                 : Y4        : input  : 1.8 V             :         : 3A        : N              
+select_i[24]                 : Y4        : input  : 1.8 V             :         : 3A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y5        :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y6        :        :                   :         : 3A        :                
 out_fv                       : Y7        : output : 1.8 V             :         : 3A        : N              

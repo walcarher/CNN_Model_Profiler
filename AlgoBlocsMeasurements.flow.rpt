@@ -1,5 +1,5 @@
 Flow report for AlgoBlocsMeasurements
-Wed Apr 13 11:44:57 2022
+Thu Apr 14 15:52:32 2022
 Quartus Prime Version 17.1.0 Build 240 10/25/2017 SJ Pro Edition
 
 
@@ -26,12 +26,12 @@ Quartus Prime Version 17.1.0 Build 240 10/25/2017 SJ Pro Edition
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.73        ;
+; Average used               ; 1.67        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;  10.5%      ;
+;     Processors 2-8         ;   9.6%      ;
 +----------------------------+-------------+
 
 
@@ -76,18 +76,18 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------+
 ; Flow Summary                                                             ;
 +-----------------------------+--------------------------------------------+
-; Flow Status                 ; Successful - Wed Apr 13 11:44:57 2022      ;
+; Flow Status                 ; Successful - Thu Apr 14 15:52:32 2022      ;
 ; Quartus Prime Version       ; 17.1.0 Build 240 10/25/2017 SJ Pro Edition ;
 ; Revision Name               ; AlgoBlocsMeasurements                      ;
-; Top-level Entity Name       ; conv3x3_224_3_64_main                      ;
+; Top-level Entity Name       ; conv3x3_224_3_32_main                      ;
 ; Family                      ; Cyclone 10 GX                              ;
 ; Device                      ; 10CX220YF780E5G                            ;
 ; Timing Models               ; Final                                      ;
-; Logic utilization (in ALMs) ; 53,610 / 80,330 ( 67 % )                   ;
-; Total registers             ; 74168                                      ;
+; Logic utilization (in ALMs) ; 21,147 / 80,330 ( 26 % )                   ;
+; Total registers             ; 34484                                      ;
 ; Total pins                  ; 71 / 340 ( 21 % )                          ;
 ; Total virtual pins          ; 0                                          ;
-; Total block memory bits     ; 139,456 / 12,021,760 ( 1 % )               ;
+; Total block memory bits     ; 108,488 / 12,021,760 ( < 1 % )             ;
 ; Total DSP Blocks            ; 0 / 192 ( 0 % )                            ;
 ; Total HSSI RX channels      ; 0 / 12 ( 0 % )                             ;
 ; Total HSSI TX channels      ; 0 / 12 ( 0 % )                             ;
@@ -100,7 +100,7 @@ refer to the applicable agreement for further details.
 +-------------------+-----------------------+
 ; Option            ; Setting               ;
 +-------------------+-----------------------+
-; Start date & time ; 04/13/2022 11:19:43   ;
+; Start date & time ; 04/14/2022 15:39:55   ;
 ; Main task         ; Compilation           ;
 ; Revision Name     ; AlgoBlocsMeasurements ;
 +-------------------+-----------------------+
@@ -111,7 +111,7 @@ refer to the applicable agreement for further details.
 +------------------------------------+---------------------------------------+-----------------------+-------------+------------+
 ; Assignment Name                    ; Value                                 ; Default Value         ; Entity Name ; Section Id ;
 +------------------------------------+---------------------------------------+-----------------------+-------------+------------+
-; COMPILER_SIGNATURE_ID              ; 1096569674838.164984158319184         ; --                    ; --          ; --         ;
+; COMPILER_SIGNATURE_ID              ; 1096569674838.164994359509468         ; --                    ; --          ; --         ;
 ; FLOW_ENABLE_POWER_ANALYZER         ; On                                    ; Off                   ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP             ; 100                                   ; --                    ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP             ; 0                                     ; --                    ; --          ; --         ;
@@ -119,7 +119,7 @@ refer to the applicable agreement for further details.
 ; POWER_BOARD_THERMAL_MODEL          ; None (CONSERVATIVE)                   ; --                    ; --          ; --         ;
 ; POWER_DEFAULT_INPUT_IO_TOGGLE_RATE ; 90 %                                  ; 12.5%                 ; --          ; --         ;
 ; POWER_PRESET_COOLING_SOLUTION      ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --                    ; --          ; --         ;
-; TOP_LEVEL_ENTITY                   ; conv3x3_224_3_64_main                 ; AlgoBlocsMeasurements ; --          ; --         ;
+; TOP_LEVEL_ENTITY                   ; conv3x3_224_3_32_main                 ; AlgoBlocsMeasurements ; --          ; --         ;
 ; VHDL_INPUT_VERSION                 ; VHDL_2008                             ; VHDL_1993             ; --          ; --         ;
 +------------------------------------+---------------------------------------+-----------------------+-------------+------------+
 
@@ -129,12 +129,12 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Synthesis                 ; 00:03:33     ; 1.8                     ; 8091 MB             ; 00:05:53                           ;
-; Fitter                    ; 00:18:35     ; 1.5                     ; 12766 MB            ; 01:36:04                           ;
-; TimeQuest Timing Analyzer ; 00:01:06     ; 1.7                     ; 10275 MB            ; 00:04:31                           ;
-; Power Analyzer            ; 00:01:18     ; 1.3                     ; 9977 MB             ; 00:04:13                           ;
-; Assembler                 ; 00:00:17     ; 1.0                     ; 7375 MB             ; 00:00:17                           ;
-; Total                     ; 00:24:49     ; --                      ; --                  ; 01:50:58                           ;
+; Synthesis                 ; 00:01:53     ; 1.8                     ; 6427 MB             ; 00:03:10                           ;
+; Fitter                    ; 00:08:45     ; 1.6                     ; 10821 MB            ; 00:41:57                           ;
+; TimeQuest Timing Analyzer ; 00:00:41     ; 1.7                     ; 8080 MB             ; 00:02:37                           ;
+; Power Analyzer            ; 00:00:44     ; 1.3                     ; 8074 MB             ; 00:02:20                           ;
+; Assembler                 ; 00:00:16     ; 1.0                     ; 6972 MB             ; 00:00:16                           ;
+; Total                     ; 00:12:19     ; --                      ; --                  ; 00:50:20                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
