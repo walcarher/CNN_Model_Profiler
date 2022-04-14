@@ -36,11 +36,12 @@ elif args.model == "ResNet18":
     model = models.resnet18(pretrained=True).cuda()
 elif args.model == "SqueezeNet":
     model = models.squeezenet1_0(pretrained=True).cuda()
-elif args.model == "DenseNet":
-    model = models.densenet161(pretrained=True).cuda()
+elif args.model == "InceptionV3":
+    model = models.inception_v3(pretrained=True).cuda()
 else:
     print("ERROR: Model is not included in the evaluation zoo")
     exit()
+    
 # Print distributions
 if args.dist_plot:
     i = 0
@@ -51,28 +52,34 @@ if args.dist_plot:
     HW = []
     C = []
     N = []
-    model_stats = summary(model,(1, 3, 224, 224),col_names=["input_size"])
+    model_stats = summary(model,(1, 3, 224, 224),col_names=["input_size","kernel_size"])
     for layer_info in model_stats.summary_list:
         if not str(layer_info).find("Conv2d: 1") == -1 or not str(layer_info).find("Conv2d: 2") == -1 or not str(layer_info).find("Conv2d: 3") == -1:
-            input_sizes.append(layer_info.input_size)
+            #print(layer_info.input_size)
+            if len(layer_info.input_size) == 4 and len(layer_info.kernel_size) == 4:
+                #print(layer_info.input_size)
+                input_sizes.append(layer_info.input_size)
+    print(len(input_sizes))
     for l in list(model.named_parameters()):
-        if (not l[0].find("features") == -1 or not l[0].find("conv") == -1) and not l[0].find("weight") == -1:
+        #print(l[0])
+        if (not l[0].find("features") == -1 or not l[0].find("conv.weight") == -1) and not l[0].find("weight") == -1:
             kernel = l[1].detach().cpu().numpy() 
-            input_size = input_sizes[i]
-            K.append(kernel.shape[2])
-            HW.append(input_size[2])
-            C.append(input_size[1])
-            N.append(kernel.shape[0])
-            i += 1
-            plt.figure()
             #print(l[0], ':', kernel.shape)
-            plt.title(args.model+": Conv "+str(i)+" Layer")
-            layer_names.append("Conv "+str(i))
-            plt.xlabel("Kernel values")
-            plt.ylabel("Count")
-            plt.hist(kernel.flatten(), bins = 2**8)
-            bins = np.linspace(kernel.min(),kernel.max(),2**8)
-            zero_count.append(np.count_nonzero(np.digitize(kernel.flatten(),bins)==np.abs(bins).argmin()))
+            if len(kernel.shape) == 4:
+                input_size = input_sizes[i]
+                K.append(kernel.shape[2])
+                HW.append(input_size[2])
+                C.append(input_size[1])
+                N.append(kernel.shape[0])
+                i += 1
+                plt.figure()
+                plt.title(args.model+": Conv "+str(i)+" Layer")
+                layer_names.append("Conv "+str(i))
+                plt.xlabel("Kernel values")
+                plt.ylabel("Count")
+                plt.hist(kernel.flatten(), bins = 2**8)
+                bins = np.linspace(kernel.min(),kernel.max(),2**8)
+                zero_count.append(np.count_nonzero(np.digitize(kernel.flatten(),bins)==np.abs(bins).argmin()))
     plt.figure()
     plt.grid(zorder=0)
     plt.title(args.model+" number of zeros per layer")
@@ -80,10 +87,10 @@ if args.dist_plot:
     plt.ylabel("Zero count")
     plt.bar(layer_names,zero_count,zorder=3)
     plt.xticks(rotation=90)
-    print(K)
-    print(HW)
-    print(C)
-    print(N)
+    print('K=(',' '.join(map(str,K)),')')
+    print('HW=(',' '.join(map(str,HW)),')')
+    print('C=(',' '.join(map(str,C)),')')
+    print('N=(',' '.join(map(str,N)),')')
     plt.show()
 
 # Generate VHDL code for each Conv2D layer with pretrained weights   
@@ -92,13 +99,14 @@ if args.gen:
     output_names = ['output']
     input_sizes = []
     #summary(model,(1, 3, 224, 224),col_names=["input_size", "output_size", "num_params", "mult_adds"])
-    model_stats = summary(model,(1, 3, 224, 224),col_names=["input_size"])
+    model_stats = summary(model,(1, 3, 224, 224),col_names=["input_size","kernel_size"])
     for layer_info in model_stats.summary_list:
         if not str(layer_info).find("Conv2d: 1") == -1 or not str(layer_info).find("Conv2d: 2") == -1 or not str(layer_info).find("Conv2d: 3") == -1:
-            input_sizes.append(layer_info.input_size)
+            if len(layer_info.input_size) == 4 and len(layer_info.kernel_size) == 4:
+                input_sizes.append(layer_info.input_size)
     i = 0
     for p in list(model.named_parameters()):
-        if (not p[0].find("features") == -1 or not p[0].find("conv") == -1) and not p[0].find("weight") == -1:
+        if (not p[0].find("features") == -1 or not p[0].find("conv.weight") == -1) and not p[0].find("weight") == -1:
             kernel = p[1].detach().cpu().numpy()
             # input_size -> (b, C, H, W)
             # kernel.shape -> (N,C,k,k)

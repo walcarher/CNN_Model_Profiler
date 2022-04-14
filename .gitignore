@@ -1,0 +1,11 @@
+# Ignore generated ONNX and compiled VHDL files
+vhdl_generated/
+
+# Ignore Quartus project
+qdb/
+
+# Ignore Quartus synthesis report
+AlgoBlocsMeasurements.syn.rpt
+
+# Ignore Quartus temporal files
+tmp-clearbox/
