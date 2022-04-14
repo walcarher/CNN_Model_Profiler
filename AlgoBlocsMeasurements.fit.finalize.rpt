@@ -1,0 +1,67 @@
+Fitter Finalize Stage Report for AlgoBlocsMeasurements
+Wed Apr 13 11:41:34 2022
+Quartus Prime Version 17.1.0 Build 240 10/25/2017 SJ Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Fitter HSLP Summary
+  3. Finalize Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------+
+; Fitter HSLP Summary                                                            ;
++--------------------------------------------------------+---------------+-------+
+; Resource                                               ; Usage         ; %     ;
++--------------------------------------------------------+---------------+-------+
+;                                                        ;               ;       ;
+; Programmable power technology high-speed tiles         ; 1,088 / 3,531 ; 31 %  ;
+; Programmable power technology low-power tiles          ; 2,443 / 3,531 ; 69 %  ;
+;     -- low-power tiles that are used by the design     ; 2,378 / 2,443 ; 97 %  ;
+;     -- unused tiles (low-power)                        ; 65 / 2,443    ; 3 %   ;
+;                                                        ;               ;       ;
+; Programmable power technology high-speed LAB tiles     ; 501 / 2,642   ; 19 %  ;
+; Programmable power technology low-power LAB tiles      ; 2,141 / 2,642 ; 81 %  ;
+;     -- low-power LAB tiles that are used by the design ; 2,137 / 2,141 ; 100 % ;
+;     -- unused LAB tiles (low-power)                    ; 4 / 2,141     ; < 1 % ;
+;                                                        ;               ;       ;
++--------------------------------------------------------+---------------+-------+
+
+
++-------------------+
+; Finalize Messages ;
++-------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Fitter
+    Info: Version 17.1.0 Build 240 10/25/2017 SJ Pro Edition
+    Info: Processing started: Wed Apr 13 11:23:22 2022
+Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off AlgoBlocsMeasurements -c AlgoBlocsMeasurements
+Info: qfit2_default_script.tcl version: #1
+Info: Project  = AlgoBlocsMeasurements
+Info: Revision = AlgoBlocsMeasurements
+Info (11888): Total time spent on timing analysis during Post-Routing is 3.74 seconds.
+Info (16557): Fitter post-fit operations ending: elapsed time is 00:02:07
+
+

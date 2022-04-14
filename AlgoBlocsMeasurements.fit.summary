@@ -1,0 +1,17 @@
+Fitter Status : Successful - Wed Apr 13 11:41:57 2022
+Quartus Prime Version : 17.1.0 Build 240 10/25/2017 SJ Pro Edition
+Revision Name : AlgoBlocsMeasurements
+Top-level Entity Name : conv3x3_224_3_64_main
+Family : Cyclone 10 GX
+Device : 10CX220YF780E5G
+Timing Models : Final
+Logic utilization (in ALMs) : 53,610 / 80,330 ( 67 % )
+Total registers : 74168
+Total pins : 71 / 340 ( 21 % )
+Total virtual pins : 0
+Total block memory bits : 139,456 / 12,021,760 ( 1 % )
+Total RAM Blocks : 587 / 587 ( 100 % )
+Total DSP Blocks : 0 / 192 ( 0 % )
+Total HSSI RX channels : 0 / 12 ( 0 % )
+Total HSSI TX channels : 0 / 12 ( 0 % )
+Total PLLs : 0 / 30 ( 0 % )
